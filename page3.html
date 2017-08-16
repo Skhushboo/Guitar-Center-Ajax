@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="nav">
+		<ul class="nav nav-pills">
+		  <li role="presentation" class="dropdown">
+		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+		      Guitars <span class="caret"></span>
+		    </a>
+		    <ul class="dropdown-menu">
+		      <li>Electronic Guitar</li>
+		      <li>Acoustic Guitar</li>
+		      <li>Acoustic Electronic Guitar</li>
+		      <li>Classical Guitar</li>
+		    </ul>
+		  </li>
+		  <li role="presentation"><a href="#">Bass</a></li>
+  		  <li role="presentation"><a href="#">Drums</a></li>
+          <li role="presentation"><a href="#">Keyboards</a></li>
+          <li role="presentation"><a href="#">DJ Lightening</a></li>
+  		  <li role="presentation"><a href="#">Used Gear</a></li>
+  			<li role="presentation"><a href="#">Clearance</a></li>
+		</ul>
+		</div>
+
+
+		<div class="nav">
+		<div class="row">
+  			<div class="col-md-3"></div>
+  			<div class="col-md-6"></div>
+  			<div class="col-md-3"></div>
+		</div>
+		<br>
+
+			<div class="container" style="height: 400px">
+		<h1>Confirmation</h1>
+		<p id="one"></p>
+		<p id="demo"></p>
+		<p id="shipping"></p>
+		<p id="reviews"></p>	
+		<p id="order"></p>
+		<p id="ordnum"></p>
+		<button onclick="home"><a href="index.html">Home</a></button>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var i = localStorage.getItem("khush");
+			var myimg ;
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(xhttp.readyState == 4 && xhttp.status ==200) {
+						var myobj = JSON.parse(xhttp.responseText);
+						myimg = myobj.allProducts;
+						myFun();		
+				}
+			};
+
+			xhttp.open("GET","guitardata.json",true);
+			xhttp.send();
+			function myFun() {
+				document.getElementById("one").src =  myimg[i].image_path;
+ 				document.getElementById("demo").innerHTML = "Product Description: " +  myimg[i].product_description; 
+ 				document.getElementById("shipping").innerHTML = "Shipping Details: " + myimg[i].shipping_details; 
+ 				document.getElementById("order").innerHTML = "Your Order is confirmed";
+ 				document.getElementById("ordnum").innerHTML="Order No. " + Math.floor(Math.random()*1000); 
+			}
+		</script>
+
+	</body>
+</html>

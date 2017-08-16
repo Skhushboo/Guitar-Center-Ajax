@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="script2.js"></script>
+	</head>
+
+	<body>
+	<div class="container">
+	<div class="row">
+		<div class="nav">
+
+		</div>
+
+    <div >
+  		<div class="col-md-4" style="background-color: #e9e3ef">
+  				<img id="one" height="300px; ">
+  		</div>
+  		<div class="col-md-8" style="font-size: 18px;background-color: #e9e3ef; height: 300px;">
+  			<p id="demo"></p>
+			<p id="shipping"></p>
+			<p id="reviews"></p>	
+  		</div>
+	</div>
+	</div>
+    </div>
+		<br>
+		<h2 align="center">Purchase details</h2>
+		<br>
+
+		<div id="form_div"></div>
+		<form name="myform" align="center" id="myform">
+			    <label>First Name</label> 
+				<input type="text" id="fname" placeholder="Your Name...">
+				<br><br>
+				
+				<label>Last Name</label>
+				<input type="text" id="lname" placeholder="Your Last Name...">
+				<br><br>
+				
+				<label>Country</label>
+				<select id="country">
+					<option value="australia">Australia</option>
+					<option value="canada">Canada</option>
+					<option value="usa">USA</option>
+					<option value="india">India</option>
+				</select>
+				<br><br>
+				
+				<label>State</label>
+				<input type="text" id="state" placeholder="State...">
+				<br><br>
+				
+				<label>Email</label>
+				<input type="text" id="email" placeholder="Email...">
+				<br><br>
+		</form>		
+
+		<div id="buttons" align="center">				
+				<input type="submit" value="Review Order" onclick="myfunction();" >
+				&nbsp;&nbsp;<button id="buy"><a href="page3.html">BUY</button>
+		</div>		                                                                                                                                           
+		<div id="view_form"></div>
+		
+	</body>
+</html>

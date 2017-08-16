@@ -1,0 +1,45 @@
+.header {
+	background-color: #D2E5F3;
+	height: 150px;
+}
+
+.heaferl {
+	background-color: #503D87;
+	height: 150px;
+}
+
+.nav {
+	background-color: #E8E5F1;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+.buy {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+
+
+input[type=text], select {
+	width: 50%;
+	border-radius:  4px;
+	border: 1px solid #ccc;
+	height: 30px;
+	padding: 12px;
+}
+
+.buttons {
+	float: left;
+	
+}
+
+
+
+
+
+
+
+
+
+
